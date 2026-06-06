@@ -17,7 +17,7 @@ import {
 
 export const resume = {
   name: "Luckychowdary Uppalapati",
-  headline: "Cybersecurity Student | SOC Operations | Cloud Security Automation",
+  headline: "Cybersecurity Student | SOC Operations | Offensive Security | Cloud Security ",
   location: "India",
   email: "luckychowdaryuppalapati@gmail.com",
   phone: "+91 9110585022",
