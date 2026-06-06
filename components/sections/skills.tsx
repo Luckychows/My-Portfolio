@@ -10,7 +10,7 @@ export function Skills() {
     <section id="skills" className="px-5 py-24 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">Skills</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-200">Skills</p>
           <h2 className="mt-4 font-display text-4xl font-semibold text-white sm:text-6xl">Interactive security capability map.</h2>
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -20,7 +20,7 @@ export function Skills() {
               <Reveal key={group.category} delay={index * 0.04}>
                 <SpotlightCard className="h-full">
                   <div className="mb-5 flex items-center justify-between">
-                    <div className="rounded-md bg-cyan-300/10 p-3 text-cyan-200">
+                    <div className="rounded-md bg-red-300/10 p-3 text-red-200">
                       <Icon className="size-6" />
                     </div>
                     <span className="text-sm text-slate-400">{group.level}%</span>
@@ -28,7 +28,7 @@ export function Skills() {
                   <h3 className="font-display text-xl text-white">{group.category}</h3>
                   <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10">
                     <motion.div
-                      className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-violet-400"
+                      className="h-full rounded-full bg-gradient-to-r from-red-400 to-orange-400"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${group.level}%` }}
                       viewport={{ once: true }}

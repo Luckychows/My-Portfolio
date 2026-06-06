@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { ResumeSection } from "@/components/sections/resume-section";
 import { Skills } from "@/components/sections/skills";
-import { TerminalSection } from "@/components/sections/terminal-section";
 import { Timeline } from "@/components/sections/timeline";
 import { CustomCursor } from "@/components/custom-cursor";
 import { CyberBackground } from "@/components/cyber-background";
@@ -13,7 +12,7 @@ import { Nav } from "@/components/nav";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen">
       <CyberBackground />
       <div className="noise" />
       <LoadingScreen />
@@ -26,7 +25,6 @@ export default function Home() {
         <Projects />
         <Timeline />
         <ResumeSection />
-        <TerminalSection />
         <Contact />
       </div>
     </main>

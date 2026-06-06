@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: dark;
-  --background: #020617;
+  --background: #000000;
   --foreground: #e5f3ff;
 }
 
@@ -21,16 +21,13 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--foreground);
-  background:
-    radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 32rem),
-    radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.15), transparent 30rem),
-    linear-gradient(180deg, #020617 0%, #030712 48%, #020617 100%);
+  background: transparent;
   overflow-x: hidden;
 }
 
 ::selection {
   color: #020617;
-  background: #67e8f9;
+  background: #ef4444;
 }
 
 a,
@@ -50,15 +47,27 @@ button {
   position: fixed;
   inset: 0;
   z-index: 1;
-  opacity: 0.08;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
 .glass {
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.64), rgba(2, 6, 23, 0.35));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 80px rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.78), rgba(15, 23, 42, 0.62));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 24px 80px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(24px) saturate(1.15);
+  -webkit-backdrop-filter: blur(24px) saturate(1.15);
+}
+
+.content-scrim {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.55) 0%,
+    rgba(2, 6, 23, 0.25) 40%,
+    rgba(2, 6, 23, 0.55) 100%
+  );
 }
 
 .spotlight {
@@ -72,7 +81,7 @@ button {
   inset: 0;
   opacity: 0;
   transition: opacity 220ms ease;
-  background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(34, 211, 238, 0.18), transparent 42%);
+  background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(239, 68, 68, 0.15), transparent 42%);
 }
 
 .spotlight:hover::before {
@@ -86,9 +95,32 @@ button {
   color: transparent;
 }
 
-.scanline {
-  background-image: linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px);
-  background-size: 100% 4px;
+.text-gradient-red {
+  background: linear-gradient(90deg, #ff6b6b, #ef4444, #dc2626);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes glitch-scan {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-8px);
+  }
+  40% {
+    transform: translateY(4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

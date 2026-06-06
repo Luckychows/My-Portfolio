@@ -12,7 +12,7 @@ export function Contact() {
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[.9fr_1.1fr]">
         <Reveal>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">Contact</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-200">Contact</p>
             <h2 className="mt-4 font-display text-4xl font-semibold text-white sm:text-6xl">Let’s build secure systems.</h2>
             <p className="mt-6 leading-8 text-slate-300">
               Recruiters and engineering teams can reach out for cybersecurity internships, SOC projects, cloud security automation, and entry-level engineering opportunities.
@@ -37,15 +37,15 @@ export function Contact() {
             <form action={`mailto:${resume.email}`} className="grid gap-4">
               <label className="grid gap-2 text-sm text-slate-300">
                 Name
-                <input className="rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-cyan-300" name="name" required />
+                <input className="rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-red-300" name="name" required />
               </label>
               <label className="grid gap-2 text-sm text-slate-300">
                 Email
-                <input className="rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-cyan-300" name="email" type="email" required />
+                <input className="rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-red-300" name="email" type="email" required />
               </label>
               <label className="grid gap-2 text-sm text-slate-300">
                 Message
-                <textarea className="min-h-36 rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-cyan-300" name="message" required />
+                <textarea className="min-h-36 rounded-md border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition focus:border-red-300" name="message" required />
               </label>
               <Button type="submit" className="mt-2">
                 <Send className="size-4" />

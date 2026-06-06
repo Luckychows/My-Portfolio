@@ -13,7 +13,7 @@ export function Projects() {
     <section id="projects" className="px-5 py-24 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">Projects</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-200">Projects</p>
           <h2 className="mt-4 max-w-4xl font-display text-4xl font-semibold text-white sm:text-6xl">
             Built like products, explained like security work.
           </h2>
@@ -21,7 +21,7 @@ export function Projects() {
 
         <div className="mt-14">
           <div className="mb-6 flex items-center gap-3">
-            <Layers3 className="size-5 text-cyan-200" />
+            <Layers3 className="size-5 text-red-200" />
             <h3 className="font-display text-2xl text-white">Major Projects</h3>
           </div>
           <div className="grid gap-6 lg:grid-cols-2">
@@ -30,14 +30,14 @@ export function Projects() {
                 <Dialog.Root>
                   <SpotlightCard className="group min-h-[520px] p-0">
                     <div className="relative overflow-hidden rounded-t-lg border-b border-white/10 p-7">
-                      <div className={`absolute inset-0 opacity-35 ${project.accent === "cyan" ? "bg-cyan-400/20" : "bg-violet-500/20"}`} />
+                      <div className={`absolute inset-0 opacity-35 ${project.accent === "cyan" ? "bg-red-400/20" : "bg-orange-500/20"}`} />
                       <motion.div
-                        className="absolute -right-16 -top-16 size-56 rounded-full bg-cyan-300/20 blur-3xl"
+                        className="absolute -right-16 -top-16 size-56 rounded-full bg-red-300/20 blur-3xl"
                         animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.6, 0.35] }}
                         transition={{ duration: 5, repeat: Infinity }}
                       />
                       <div className="relative">
-                        <p className="text-sm text-cyan-100">{project.period}</p>
+                        <p className="text-sm text-red-100">{project.period}</p>
                         <h3 className="mt-4 font-display text-4xl font-semibold text-white">{project.name}</h3>
                         <p className="mt-4 max-w-xl leading-7 text-slate-300">{project.summary}</p>
                       </div>
@@ -45,14 +45,14 @@ export function Projects() {
                     <div className="p-7">
                       <div className="flex flex-wrap gap-2">
                         {project.stack.map((tech) => (
-                          <span key={tech} className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-50">
+                          <span key={tech} className="rounded-full border border-red-300/20 bg-red-300/10 px-3 py-1 text-xs text-red-50">
                             {tech}
                           </span>
                         ))}
                       </div>
                       <ul className="mt-6 space-y-3 text-sm leading-6 text-slate-300">
                         {project.bullets.slice(0, 3).map((bullet) => (
-                          <li key={bullet} className="border-l border-cyan-300/30 pl-4">
+                          <li key={bullet} className="border-l border-red-300/30 pl-4">
                             {bullet}
                           </li>
                         ))}
@@ -85,7 +85,7 @@ export function Projects() {
 
         <div className="mt-16">
           <div className="mb-6 flex items-center gap-3">
-            <Layers3 className="size-5 text-violet-200" />
+            <Layers3 className="size-5 text-orange-200" />
             <h3 className="font-display text-2xl text-white">Minor Projects</h3>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -94,7 +94,7 @@ export function Projects() {
               return (
                 <Reveal key={project.name} delay={index * 0.06}>
                   <SpotlightCard className="h-full">
-                    <div className="rounded-md bg-violet-400/10 p-3 text-violet-200 w-fit">
+                    <div className="rounded-md bg-orange-400/10 p-3 text-orange-200 w-fit">
                       <Icon className="size-6" />
                     </div>
                     <h3 className="mt-5 font-display text-2xl text-white">{project.name}</h3>

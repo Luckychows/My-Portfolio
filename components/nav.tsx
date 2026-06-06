@@ -22,7 +22,7 @@ export function Nav() {
           ))}
         </div>
         <a href="#contact" className="rounded-full bg-cyan-300 px-4 py-2 text-xs font-semibold text-slate-950 shadow-glow">
-          Hire signal
+          Contact Me
         </a>
       </nav>
     </motion.header>

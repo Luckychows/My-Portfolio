@@ -1,45 +1,25 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Points, PointMaterial } from "@react-three/drei";
-import { useMemo, useRef } from "react";
-import * as THREE from "three";
-
-function ParticleField() {
-  const ref = useRef<THREE.Points>(null);
-  const points = useMemo(() => {
-    const positions = new Float32Array(1200 * 3);
-    for (let i = 0; i < positions.length; i += 3) {
-      positions[i] = (Math.random() - 0.5) * 14;
-      positions[i + 1] = (Math.random() - 0.5) * 8;
-      positions[i + 2] = (Math.random() - 0.5) * 8;
-    }
-    return positions;
-  }, []);
-
-  useFrame((_, delta) => {
-    if (!ref.current) return;
-    ref.current.rotation.y += delta * 0.035;
-    ref.current.rotation.x += delta * 0.01;
-  });
-
-  return (
-    <Points ref={ref} positions={points} stride={3} frustumCulled>
-      <PointMaterial transparent color="#22d3ee" size={0.018} sizeAttenuation depthWrite={false} opacity={0.55} />
-    </Points>
-  );
-}
-
 export function CyberBackground() {
   return (
-    <div aria-hidden className="fixed inset-0 z-0 opacity-70">
-      <Canvas camera={{ position: [0, 0, 5], fov: 70 }} dpr={[1, 1.5]}>
-        <Float speed={1.4} rotationIntensity={0.35} floatIntensity={0.35}>
-          <ParticleField />
-        </Float>
-      </Canvas>
-      <div className="absolute inset-0 bg-cyber-grid bg-[size:48px_48px] opacity-[0.14]" />
-      <div className="absolute inset-0 scanline opacity-20" />
+    <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+      {/* Pure black base — blends with GIF edges */}
+      <div className="absolute inset-0 bg-black" />
+
+      {/* Layer 1 — fixed centred hacker GIF */}
+      <img
+        src="/BG.gif"
+        alt=""
+        className="fixed left-1/2 top-1/2 z-[1] h-auto w-[min(96vw,720px)] max-h-[min(88vh,920px)] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.72]"
+        draggable={false}
+      />
+
+      {/* Layer 2 — subtle vignette for text contrast, stays black at edges */}
+      <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_90%_75%_at_50%_50%,transparent_0%,rgba(0,0,0,0.35)_65%,rgba(0,0,0,0.75)_100%)]" />
+      <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/50 via-transparent to-black/60" />
+
+      {/* Minimal ambient */}
+      <div className="absolute inset-0 z-[3] bg-cyber-grid bg-[size:80px_80px] opacity-[0.015]" />
     </div>
   );
 }
