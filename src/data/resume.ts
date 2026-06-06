@@ -28,10 +28,10 @@ export const resume = {
     { label: "Email", href: "mailto:luckychowdaryuppalapati@gmail.com", icon: Mail },
   ],
   summary:
-    "Cybersecurity student focused on SOC operations, cloud security, and detection engineering. Experienced in building AWS-based security monitoring systems and AI-assisted incident triage platforms with hands-on expertise in SIEM operations, threat detection, and cloud security automation.",
+    "Cybersecurity student focused on SOC operations, Offensive Security, and Cloud Security. Experienced in building AWS-based security monitoring systems and AI-assisted incident triage platforms with hands-on expertise in SIEM operations, threat detection, and cloud security automation.",
   targets: [
     "SOC Operations Internships",
-    "Detection Engineering",
+    "Offensive Security",
     "Cloud Security",
     "Incident Response",
   ],
@@ -67,7 +67,7 @@ export const resume = {
       items: ["Microsoft Sentinel", "Splunk", "Wazuh", "ELK/OpenSearch", "Microsoft Defender", "KQL", "SPL", "Alert Triage", "Threat Hunting", "Incident Response"],
     },
     {
-      category: "Vulnerability Assessment & Testing",
+      category: "Vulnerability Assessment & Penetration Testing",
       icon: ShieldCheck,
       level: 88,
       items: ["Burp Suite", "Nessus", "Nmap", "Metasploit", "sqlmap", "FFUF", "BloodHound", "Impacket", "OWASP Top 10", "CVSS Reporting"],
@@ -76,7 +76,7 @@ export const resume = {
       category: "Cloud Security & DevOps",
       icon: CloudCog,
       level: 86,
-      items: ["AWS IAM", "CloudTrail", "CloudWatch", "EventBridge", "Lambda", "AWS Config", "S3", "EC2", "Docker", "Cloud Misconfiguration Detection"],
+      items: ["AWS IAM", "CloudTrail", "CloudWatch", "EventBridge", "Lambda", "AWS Config", "S3", "EC2", "Cloud Misconfiguration Detection", "Docker"],
     },
     {
       category: "Detection Engineering",
