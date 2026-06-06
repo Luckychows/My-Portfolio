@@ -34,7 +34,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 font-display text-base text-white/85 sm:text-lg">
-            SOC Operations | Cloud Security | Automation
+            SOC Operations | Offensive Security | Cloud Security
           </p>
 
           <p className="mt-6 max-w-xl text-sm leading-7 text-white/55 sm:text-[15px] sm:leading-8">
