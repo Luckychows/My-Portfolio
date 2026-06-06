@@ -21,7 +21,7 @@ export const resume = {
   location: "India",
   email: "luckychowdaryuppalapati@gmail.com",
   phone: "+91 9110585022",
-  resumeFile: "/resume/Luckychowdary_Resume_ATS_One_Page_v4.pdf",
+  resumeFile: "/resume/Luckychowdary_Resume.pdf",
   socials: [
     { label: "GitHub", href: "https://github.com/Luckychows", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/search/results/all/?keywords=Luckychowdary%20Uppalapati", icon: Linkedin },
